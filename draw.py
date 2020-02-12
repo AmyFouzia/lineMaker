@@ -26,7 +26,7 @@ def draw_line( x0, y0, x1, y1, screen, color):
         d2 = A + (2 * B)
 
         while y <= y1:
-            plot(screen, color, x, y)
+            plot(screen, color, int(x), int(y))
 
             if(d2 < 0):
                 x = x+1
@@ -34,9 +34,31 @@ def draw_line( x0, y0, x1, y1, screen, color):
             y = y + 1
             d2 = d2 + (2 * B)
 
+    #octant 8/4
+    if (-1 > m):
+        d3 = A - (2 * B)
 
-    #octant 3
-s = new_screen()
-c = [ 0, 255, 0 ]
-draw_line(3,4, 6, 7, s, c)
-display1(s, "line", 500, 500)
+        while y >= y1:
+            plot(screen, color, int(x), int(y))
+
+            if(d3 > 0):
+                x = x+1
+                d3 = d3 + (2 * A)
+            y = y - 1
+            d3 = d3 - (2 * B)
+
+    #octant 7/3
+    if(m <= 0 and m >= -1):
+        d4 = B + (2 * A)
+
+        while x <= x1:
+            plot(screen, color, int(x), int(y))
+
+            if(d4 < 0):
+                y = y-1
+                d4 = d4 - (2 * B)
+            x = x + 1
+            d4 = d4 + (2 * A)
+
+
+    return True
