@@ -10,7 +10,7 @@ def draw_line( x0, y0, x1, y1, screen, color):
 
     #vertical lines
     if (x0 == x1):
-         if(y1 < y0):
+        if(y1 < y0):
             y0, y1 = y1, y0
         for i in range(y0, y1 + 1):
             plot(screen, color, int(x0), int(i))
