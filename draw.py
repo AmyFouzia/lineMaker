@@ -9,11 +9,11 @@ def draw_line( x0, y0, x1, y1, screen, color):
         for i in range(y0, y1 + 1):
             plot(screen, color, int(x0), int(i))
 
-    if (x1 < x0):
+    elif (x1 < x0):
         x0, x1 = x1, x0
         y0, y1 = y1, y0
 
-    elif(x0 != x1):
+    else:
         A = y1 - y0
         B = -(x1 - x0)
         x = x0
