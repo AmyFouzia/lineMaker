@@ -33,7 +33,7 @@ def draw_line( x0, y0, x1, y1, screen, color):
                 d1 = d1 + (2 * A)
 
     #octant 2/6
-        elif (1 < m):
+        elif (m > 1):
             d2 = (2 * B) + A
 
             while y <= y1:
@@ -46,7 +46,7 @@ def draw_line( x0, y0, x1, y1, screen, color):
                 d2 = d2 + (2 * B)
 
     #octant 8/4
-        elif (-1 > m):
+        elif (m < -1):
             d3 = A - (2 * B)
 
             while y >= y1:
