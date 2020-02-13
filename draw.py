@@ -16,10 +16,12 @@ def draw_line( x0, y0, x1, y1, screen, color):
         for i in range(y0, y1 + 1):
             plot(screen, color, int(x0), int(i))
 
-    elif (x1 < x0):
+    if (x1 < x0):
         x0, x1 = x1, x0
+    if(y1 < y0):
         y0, y1 = y1, y0
 
+    m = (float(y1-y0)/float(x1-x0))
 
     #octant 1/5 / horizontal lines
     elif (0 <= m and m <= 1):
