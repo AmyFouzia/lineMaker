@@ -26,8 +26,9 @@ draw_line(XRES-1, YRES-1, XRES/2, 0, s, c); #DOESNT WORK
 
 #octants 7 and 3
 #c[BLUE] = 255;
-#draw_line(0, YRES-1, XRES/2, 0, s, c);
-draw_line(XRES-1, 0, XRES/2, YRES-1, s, c);
+#draw_line(0, YRES-1, XRES/2, 0, s, c); #WORKS
+draw_line(XRES-1, 0, XRES/2, YRES-1, s, c); #DOESNT WORK
+print(XRES-1, XRES/2, YRES-1)
 
 #horizontal and vertical
 #c[BLUE] = 0;
