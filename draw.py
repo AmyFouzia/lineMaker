@@ -6,7 +6,6 @@ def draw_line( x0, y0, x1, y1, screen, color):
     B = -(x1 - x0)
     x = x0
     y = y0
-    m = (float(y1-y0)/float(x1-x0))
 
     #vertical lines
     if (x0 == x1):
@@ -19,7 +18,7 @@ def draw_line( x0, y0, x1, y1, screen, color):
         x0, x1 = x1, x0
         y0, y1 = y1, y0
 
-    
+    m = (float(y1-y0)/float(x1-x0))
     #octant 1/5 / horizontal lines
     elif (0 <= m and m <= 1):
         d1 = (2 * A) + B
