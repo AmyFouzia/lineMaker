@@ -6,11 +6,9 @@ def draw_line( x0, y0, x1, y1, screen, color):
     B = -(x1 - x0)
     x = x0
     y = y0
-    if (x1-x0 != 0):
-        m = (float(y1-y0)/float(x1-x0))
 
     #vertical lines
-    if (x0 == x1 or (x1-x0) == 0):
+    if (x0 == x1):
         if(y1 < y0):
             y0, y1 = y1, y0
         for i in range(y0, y1 + 1):
