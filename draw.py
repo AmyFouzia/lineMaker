@@ -1,5 +1,4 @@
 from display import *
-import math
 
 def draw_line( x0, y0, x1, y1, screen, color):
     #vertical lines
@@ -18,13 +17,13 @@ def draw_line( x0, y0, x1, y1, screen, color):
         B = -(x1 - x0)
         x = x0
         y = y0
-        m = (float(y1-y)/float(x1-x))
+        m = (float(y1-y0)/float(x1-x0))
 
     #octant 1/5 / horizontal lines
         if (0 <= m and m <= 1):
             d1 = (2 * A) + B
 
-            while x <= x1:
+            while x < x1:
                 plot(screen, color, int(x), int(y))
 
                 if(d1 > 0):
@@ -61,7 +60,7 @@ def draw_line( x0, y0, x1, y1, screen, color):
 
     #octant 7/3 / horizontal lines
         elif(m <= 0 and m >= -1):
-            d4 = B + (2 * A)
+            d4 = (2 * A) + B
 
             while x <= x1:
                 plot(screen, color, int(x), int(y))
