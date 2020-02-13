@@ -2,9 +2,6 @@ from display import *
 import math
 
 def draw_line( x0, y0, x1, y1, screen, color):
-    A = y1 - y0
-    B = -(x1 - x0)
-
     #vertical lines
     if (x0 == x1):
         if(y1 < y0):
@@ -17,9 +14,12 @@ def draw_line( x0, y0, x1, y1, screen, color):
         y0, y1 = y1, y0
 
     else:
+        A = y1 - y0
+        B = -(x1 - x0)
         x = x0
         y = y0
         m = (float(y1-y)/float(x1-x))
+        
     #octant 1/5 / horizontal lines
         if (0 <= m and m <= 1):
             d1 = (2 * A) + B
