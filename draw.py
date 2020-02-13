@@ -8,11 +8,11 @@ def draw_line( x0, y0, x1, y1, screen, color):
             y0, y1 = y1, y0
         for i in range(y0, y1 + 1):
             plot(screen, color, int(x0), int(i))
-
+#(499,499,250,0)
     elif (x1 < x0):
         x0, x1 = x1, x0
         y0, y1 = y1, y0
-
+#(250,0,499,499)
     else:
         A = y1 - y0
         B = -(x1 - x0)
@@ -35,7 +35,7 @@ def draw_line( x0, y0, x1, y1, screen, color):
 
     #octant 2/6
         elif (1 < m):
-            d2 = A + (2 * B)
+            d2 = (2 * B) + A
 
             while y <= y1:
                 plot(screen, color, int(x), int(y))
