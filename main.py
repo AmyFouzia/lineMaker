@@ -21,7 +21,7 @@ c = [ 0, 255, 0 ]
 c[RED] = 255;
 c[GREEN] = 0;
 c[BLUE] = 0;
-#draw_line(0, 0, XRES/2, YRES-1, s, c); #WORKS
+draw_line(0, 0, XRES/2, YRES-1, s, c); #WORKS
 draw_line(XRES-1, YRES-1, XRES/2, 0, s, c); #DOESNT WORK
 #draw_line(499, 499, 250, 0, s, c) m = pos
 
